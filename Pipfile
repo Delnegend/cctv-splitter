@@ -7,6 +7,7 @@ name = "pypi"
 pytesseract = "*"
 opencv-python = "*"
 numpy = "*"
+scikit-image = "*"
 
 [dev-packages]
 
