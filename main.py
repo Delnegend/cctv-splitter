@@ -112,7 +112,7 @@ def main(input_video: str, start_frame: int, end_frame: int, output_dir: str):
             # convert frame number to timecode to feed into ffmpeg and run
             begin_time = frame_to_timecode(marker_list[-2], framerate)
             end_time = frame_to_timecode(marker_list[-1] - 1, framerate) # -1 because we want the frame before the marker
-            sp.run(["ffmpeg", "-i", input_video, "-ss", begin_time, "-to", end_time, "-c:v", "copy", "-c:a", "aac", output_file], stdout=sp.DEVNULL, stderr=sp.DEVNULL)
+            sp.run(["ffmpeg", "-i", input_video, "-ss", begin_time, "-to", end_time, "-c:v", "copy", "-c:a", "libopus", output_file], stdout=sp.DEVNULL, stderr=sp.DEVNULL)
 
         # store the current frame as previous frame
         previous_frame_data = current_frame_data
