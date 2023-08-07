@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
-from main import SENSITIVITY
 from skimage.metrics import structural_similarity as ssim
+
+from main import SENSITIVITY
+
 
 def is_similar(imageA: np.ndarray, imageB: np.ndarray) -> bool:
     """Using SSIM to determine if two images are similar"""
