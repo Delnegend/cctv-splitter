@@ -1,3 +1,5 @@
-__pycache__
 *.mp4
 *.mkv
+*.png
+__pycache__/
+.ruff_cache/
