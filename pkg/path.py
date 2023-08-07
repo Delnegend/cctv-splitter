@@ -1,6 +1,7 @@
+from os import getcwd, path
 
-def norm(input_path: str, absolute = False):
-    from os import path, getcwd
+
+def norm(input_path: str, absolute=False):
     """Normalize path"""
     if absolute:
         input_path = path.abspath(input_path) if not path.isabs(input_path) else input_path
